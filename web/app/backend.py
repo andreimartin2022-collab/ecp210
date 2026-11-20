@@ -1,7 +1,7 @@
-"""Connection to the ECP 210 (through MATLAB).
+"""this'll be the connection to the ecp210 through matlab.
 
-SimulatedBackend stands in until the MATLAB communication is ready.
-Any real backend must provide these same methods:
+SimulatedBackend stands in until we make the matlab communication,
+so this is just a little visualizer with the same methods,
 power_on, power_off, set_input, stop, read.
 """
 import threading
@@ -9,8 +9,8 @@ import time
 
 
 class SimulatedBackend:
-    """Three masses in a chain driven by the motor input.
-    Masses, springs, and damping are placeholders, not real ECP values."""
+    """three masses in a chain driven by the motor input.
+    Masses, springs, and damping are placeholders obviously. not real ECP values."""
 
     def __init__(self):
         self.m = [1.0, 1.0, 1.0]
